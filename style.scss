@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+@mixin setFont($color,$size,$lineheight)
+{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $size;
+    line-height: $lineheight;
+    color : $color;
+}
+@mixin experienceCards($height)
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 20px;
+    border-radius: 5px;
+
+}
+@mixin setSourceCodePro($color,$size,$lineheight,$weight)
+{
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineheight;
+    color : $color;
+}
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --bg-color : #F7F3F3;
+}
+body
+{
+    background-color: var(--bg-color);
+}
+.mainHeader
+{
+    max-width: 1216px;
+    width : 100%;
+    margin : auto;
+    padding: 0px 112px;
+}
+.header
+{
+    padding: 0px 28px;
+    background: #F7F3F3;
+    height : 60px;
+    .top-nav
+    {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+    .logo
+    {
+        display: flex;
+        gap : 8px;
+        align-items: center;
+        h4{
+            font-family: 'Source Sans Pro', sans-serif;
+            color : #111827;
+        }
+    }
+}
+.btn-contact
+{
+    a{
+        padding: 12px 21px;
+        background: #3474F3;
+        border-radius: 6px;
+        color: #F7F3F3;
+        text-decoration: none;    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+    }
+}
+.navigation
+{
+    .nav{
+      
+        .nav-links
+        {
+            display: flex;
+            align-items: center;
+            gap : 30px;
+            .nav-icons
+            {
+                display: flex;
+                gap : 18px;
+                align-items: center;
+            }
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 12px;
+                    color : #111827;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Main Section */
+.main
+{
+   
+    margin: auto;
+    width : 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 92px 320px;
+
+    .mainDiv
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap : 24px;
+        .firstdiv
+        {
+            
+            h1{
+                font-family: 'Source Code Pro', monospace;
+                font-size: 60px;
+                text-align: center;
+                max-width : 432px;
+                width : 100%;
+            }
+        }
+        .seconddiv p
+        {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 31px;
+            text-align: justify;
+            color: #898989;
+            max-width : 800px;
+            width : 100%;
+        }
+        .thirddiv
+        {
+            display: flex;
+            gap : 16px;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 3px 8px;
+                gap: 5px;
+                background: #E3E8ED;
+                border-radius: 3px;
+                span{
+                    font-family: 'Source Sans Pro';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 153.7%;
+                    color: #111827;
+                }
+            }
+        }
+    }
+
+}
+
+
+.experience
+{
+    margin : auto;
+    width : 100%;
+    max-width: 1440px;
+    min-height : 100vh;
+    padding : 92px, 0px, 92px, 0px;
+    .main-div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 112px;
+        gap: 42px;
+        .experience-title
+        {
+            h1{
+                font-family: 'Source Code Pro';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 60px;
+            }
+        }
+        .cards
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 64px;
+            .left
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                border-radius: 5px;
+                .exp:hover
+                {
+                    background-color: #E3E8ED;
+                }
+                .firstdiv
+                {
+                    @include experienceCards(96px);
+                    .card-text
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0;
+                    }
+                }
+                .seconddiv
+                {
+                    @include experienceCards(95px);
+                }
+                .thirddiv
+                {
+                    @include experienceCards(96px);
+                }
+                
+            }
+            .right
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 28px;
+             .first{
+                    @include setFont(#111827,18px,28.57px);
+                    p:last-child
+                    {
+                        @include setFont(#6B7280,16px,153.7%);
+                    }
+                }
+                .second{
+                    @include setFont(#111827,16px,20.83px)
+                }
+                .third{
+                    @include setFont(#111827,16px,20.83px)
+                
+                }
+            }
+           
+        }
+    }
+}
+.company
+{
+    @include setFont(#111827,18px,158.7%)
+}
+.designation
+{
+    @include setFont(rgba(23, 33, 53, 0.4),12px ,  15px)
+}
+
+
+
+/* Latest Work */
+.latestWork
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    width : 100%;
+    margin : auto;
+    padding: 92px 0px;
+    .latestworkdiv
+    {
+        min-height : 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 112px;
+        gap: 42px;
+        .first
+        {
+            h2{
+                @include setSourceCodePro(#111827,48px,60px,700);
+            }
+        }
+        .second
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 48px;
+           .card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 26px;
+                gap: 26px;
+                border-radius: 10px;
+                &:hover
+                {
+                    background: #E3E8ED;;
+                }
+                .card-footer
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 12px;
+                   .last-text
+                    {
+                        @include setFont(#111827,16px,24.59px);
+                    }
+                    .space-between
+                    {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0px;   
+                        gap: 12px;
+                        .card-icon
+                        {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0px;
+                            gap: 16px;
+                        }
+                    }
+                    .technology
+                    {
+                        list-style-type: none;
+                        display: flex;
+                        align-items: flex-start;
+                        padding: 0px;
+                        gap: 12px;
+                        @include setFont(#111827,12px,15.08px);
+                        li{
+                            width: fit-content;
+                            padding: 3px 8px;
+                            background: #E3E8ED;
+                            border-radius: 3px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .card-image
+                {
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: flex-start;
+                }
+                .card-top-text
+                {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 103px;
+                    h3{
+                        @include setSourceCodePro(#111827,36px,45.25px,700)
+                    }
+                    .year
+                    {
+                        @include setFont( rgba(18, 15, 12, 0.4), 16px,153.7% );
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Ready to start */
+.start
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 92px 0px;
+   
+    margin : auto;
+    max-width : 1440px;
+    width : 100%;
+    .box
+    {
+     
+        padding: 0px 42px;
+        background: #E3E8ED;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            width : 665px;
+            text-align: center;
+            @include setSourceCodePro(#111827,60px,61px,700);
+        }
+    }
+
+}
+.footer{
+    padding : 16px 0px;
+    width : 100%;
+    max-width : 1440px;
+    margin : auto;
+    .outerdiv
+    {
+        border-radius: 25px;
+        padding: 0px 112px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo
+    {
+        display: flex;
+        gap : 8px;
+        align-items: center;
+        h4{
+            font-family: 'Source Sans Pro', sans-serif;
+            color : #111827;
+        }
+    }
+}
+@media screen and ((min-width : 780px) and (max-width : 1024px))
+{
+ 
+}
+@media  screen and (max-width : 1024px) {
+    .second
+    {
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center;
+    }
+}
+@media screen and (max-width : 400px) {
+  
+    .second
+    {
+        .card
+        {
+            padding : 0px !important;
+        }
+    }
+}

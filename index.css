@@ -1,0 +1,716 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #F7F3F3;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0px 112px;
+  margin: auto;
+  z-index: 1000;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav .logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 17.5px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.nav-links li {
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #111827;
+  position: relative;
+}
+.nav-links li a:hover {
+  font-weight: bolder;
+}
+.nav-links li a:hover::after {
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.btn-contact a {
+  padding: 12px 21px;
+  background: #3474F3;
+  border-radius: 6px;
+  color: #F7F3F3;
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.mobileNav {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+.mobileNav .mobile-menu {
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.mobileNav .mobile-menu li {
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+.mobileNav .mobile-menu li a {
+  text-decoration: none;
+  color: #111827;
+  position: relative;
+}
+.mobileNav .mobile-menu li a:hover {
+  font-weight: bolder;
+}
+.mobileNav .mobile-menu li a:hover::after {
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}
+
+.display {
+  display: none;
+}
+
+.display-Menu {
+  display: none;
+}
+
+/* Main Section */
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.main .firstdiv h1 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 60px;
+  text-align: center;
+  max-width: 432px;
+  width: 100%;
+}
+.main .seconddiv p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: justify;
+  color: #898989;
+  max-width: 800px;
+  width: 100%;
+}
+.main .thirddiv {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.main .thirddiv div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 8px;
+  gap: 5px;
+  background: #E3E8ED;
+  border-radius: 3px;
+}
+.main .thirddiv div span {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 153.7%;
+  color: #111827;
+}
+
+.experience {
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  padding: 92px 0px 92px 0px;
+}
+.experience .main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 112px;
+  gap: 42px;
+}
+.experience .main-div .experience-title h1 {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+}
+.experience .main-div .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 64px;
+}
+.experience .main-div .cards .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 50%;
+  border-radius: 5px;
+}
+.experience .main-div .cards .left .exp:hover {
+  background-color: #E3E8ED;
+}
+.experience .main-div .cards .left .firstdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 16px;
+  gap: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+.experience .main-div .cards .left .firstdiv .card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+.experience .main-div .cards .left .seconddiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 16px;
+  gap: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+.experience .main-div .cards .left .thirddiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 16px;
+  gap: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+.experience .main-div .cards .right {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 28px;
+}
+.experience .main-div .cards .right .first {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28.57px;
+  color: #111827;
+}
+.experience .main-div .cards .right .first p:last-child {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 153.7%;
+  color: #6B7280;
+}
+.experience .main-div .cards .right .second {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.83px;
+  color: #111827;
+}
+.experience .main-div .cards .right .third {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.83px;
+  color: #111827;
+}
+
+.company {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 158.7%;
+  color: #111827;
+}
+
+.designation {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(23, 33, 53, 0.4);
+}
+
+/* Latest Work */
+.latestWork {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 92px 0px;
+}
+.latestWork .latestworkdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  width: 100%;
+  padding: 0px 112px;
+}
+.latestWork .latestworkdiv .first {
+  width: 100%;
+}
+.latestWork .latestworkdiv .first h2 {
+  font-size: 48px;
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+}
+.latestWork .latestworkdiv .second {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  gap: 48px;
+}
+.latestWork .latestworkdiv .second .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+.latestWork .latestworkdiv .second .card:hover {
+  background: #E3E8ED;
+}
+.latestWork .latestworkdiv .second .card .card-top-text p {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 153.7%;
+  color: rgba(18, 15, 12, 0.4);
+}
+.latestWork .latestworkdiv .second .card .card-image {
+  width: 100%;
+}
+.latestWork .latestworkdiv .second .card .card-image img {
+  width: 100%;
+}
+.latestWork .latestworkdiv .second .card .card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.latestWork .latestworkdiv .second .card .card-footer .last-text {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 153.7%;
+}
+.latestWork .latestworkdiv .second .card .card-footer .space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.latestWork .latestworkdiv .second .card .card-footer .space-between .technology {
+  display: flex;
+  list-style-type: none;
+  gap: 12px;
+}
+.latestWork .latestworkdiv .second .card .card-footer .space-between .technology li {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 8px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  background: #E3E8ED;
+  border-radius: 3px;
+}
+.latestWork .latestworkdiv .second .card .card-footer .space-between .card-icon {
+  display: flex;
+  gap: 16px;
+}
+.latestWork .latestworkdiv .second .card .card-top-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start;
+  width: 100%;
+  gap: 103px;
+}
+.latestWork .latestworkdiv .second .card .card-top-text h3 {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 92px 0px;
+  margin: auto;
+}
+.start .footer-text {
+  padding: 0px 42px;
+  background: #E3E8ED;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start .footer-text h1 {
+  text-align: center;
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 61px;
+  color: #111827;
+}
+
+.footer {
+  padding: 16px 0px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+.footer .logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.footer .logo h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #111827;
+}
+.footer .outerdiv {
+  border-radius: 25px;
+  padding: 0px 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and ((min-width: 780px) and (max-width: 1024px)) {
+  .latestWork {
+    padding: 92px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .latestWork .latestworkdiv {
+    padding: 0px 48px;
+    gap: 42px;
+  }
+  .latestWork .latestworkdiv .second {
+    flex-direction: column;
+  }
+  .year {
+    display: none;
+  }
+  .header {
+    padding: 0px 48px;
+  }
+  .main {
+    padding: 92px 18px;
+  }
+  .main .thirddiv {
+    max-width: 800px;
+    width: 100%;
+    gap: 10px;
+  }
+  .designation {
+    display: none;
+  }
+  .experience .main-div {
+    padding: 0 48px;
+  }
+  .footer .outerdiv {
+    border-radius: 25px;
+    padding: 0px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and ((min-width: 600px) and (max-width: 780px)) {
+  .header {
+    padding: 0px 32px;
+  }
+  .main {
+    padding: 92px 18px;
+  }
+}
+@media screen and ((min-width: 400px) and (max-width: 780px)) {
+  .year {
+    display: none;
+  }
+  .latestWork {
+    padding: 92px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .latestWork .latestworkdiv {
+    padding: 0px 32px;
+    gap: 42px;
+  }
+  .latestWork .latestworkdiv .second {
+    flex-direction: column;
+  }
+  .main {
+    padding: 92px 18px;
+  }
+  .main .thirddiv {
+    justify-content: center;
+  }
+  .designation {
+    display: none;
+  }
+  .experience .main-div {
+    padding: 0 32px;
+  }
+  .experience .main-div .left {
+    width: 40%;
+  }
+  .experience .main-div .right {
+    width: 60%;
+  }
+  .start {
+    padding: 92px 32px;
+  }
+  .start .footer-text {
+    padding: 0px 42px;
+    background: #E3E8ED;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .start .footer-text h1 {
+    font-size: 48px;
+    line-height: 60.34px;
+  }
+  .footer .outerdiv {
+    border-radius: 25px;
+    padding: 0px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main {
+    padding: 92px 18px;
+  }
+  .main .thirddiv {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .experience .main-div .experience-title h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main .firstdiv h1 {
+    font-size: 36px;
+  }
+  .latestWork .latestworkdiv .first h2 {
+    font-size: 30px;
+  }
+  .latestWork .latestworkdiv .second .card .card-top-text h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .company {
+    display: none;
+  }
+  .left {
+    flex-direction: row;
+  }
+  .experience .main-div .cards {
+    flex-direction: column;
+  }
+  .experience .main-div .cards .left {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+  }
+  .experience .main-div .cards .right {
+    width: 100%;
+    gap: 38px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+  .nav-links > li {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .display {
+    display: block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .latestWork {
+    padding: 92px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .latestWork .latestworkdiv {
+    padding: 0px 32px;
+    gap: 42px;
+  }
+  .latestWork .latestworkdiv .second {
+    flex-direction: column;
+  }
+  .latestWork .latestworkdiv .second .card {
+    padding: 8px;
+  }
+  .latestWork .latestworkdiv .second .card .card-footer .space-between {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .year {
+    display: none;
+  }
+  .experience .main-div {
+    padding: 0 16px;
+  }
+  .experience .main-div .experience-title h1 {
+    font-size: 28px;
+    width: 100%;
+  }
+  .designation {
+    display: none;
+  }
+  .company {
+    display: none;
+  }
+  .start .footer-text {
+    padding: 42px 16px;
+    background: #E3E8ED;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .start .footer-text h1 {
+    font-size: 24px;
+    line-height: 30.17px;
+  }
+  .start {
+    padding: 48px 16px;
+  }
+  .footer .outerdiv {
+    border-radius: 25px;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 670px) {
+  .start .footer-text h1 {
+    font-size: 24px;
+    line-height: 30.17px;
+  }
+}/*# sourceMappingURL=index.css.map */

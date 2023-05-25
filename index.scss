@@ -1,0 +1,859 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #F7F3F3;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+body::-webkit-scrollbar
+{
+    display: none;
+}
+.header
+{
+    max-width : 1440px;
+    width : 100%;
+    padding : 0px 112px;
+    margin : auto;
+    z-index : 1000;
+    .nav
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo
+        {
+            display: flex;
+            gap : 8px;
+            align-items: center;
+            padding : 17.5px 0;
+        }
+    }
+}
+
+
+.nav-links
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 30px;
+    li 
+    {
+        list-style-type: none;
+        text-decoration: none;
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+     
+        a 
+        {
+            text-decoration: none;
+            color: #111827;
+            position: relative;
+            &:hover
+            {
+                font-weight: bolder;
+            }
+            &:hover::after
+            {
+                content : '';
+                width : 20px;
+                height : 5px;
+                background-color: black;
+                position: absolute;
+                top : 15px;
+                left : 5px;
+            }
+        }
+    }
+
+}
+.nav-icons
+{
+    display : flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap : 18px;
+}
+
+.btn-contact a {
+    padding: 12px 21px;
+    background: #3474F3;
+    border-radius: 6px;
+    color: #F7F3F3;
+    text-decoration: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+.mobileNav
+{
+
+    position: absolute;
+    top : 57px;
+    left : 0 ;
+    z-index : 100;
+    width : 100% ;
+    background-color: white;
+    height : 100vh;
+    overflow: hidden;
+    .mobile-menu
+    {
+        height : calc(100vh - 56px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap : 50px;
+        li 
+        {
+            list-style-type: none;
+            text-decoration: none;
+            font-family: "Inter", sans-serif;
+            font-size: 12px;
+            
+            a 
+            {
+                text-decoration: none;
+                color: #111827;
+                position: relative;
+                &:hover
+                {
+                    font-weight: bolder;
+                }
+                &:hover::after
+                {
+                    content : '';
+                    width : 20px;
+                    height : 5px;
+                    background-color: black;
+                    position: absolute;
+                    top : 15px;
+                    left : 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.display 
+{
+    display: none;
+}
+.display-Menu
+{
+    display: none;
+}
+
+/* Main Section */
+.main
+{
+    min-height : 100vh ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 24px;
+    .firstdiv h1
+    {  
+        font-family: "Source Code Pro", monospace;
+        font-size: 60px;
+        text-align: center;
+        max-width: 432px;
+        width: 100%;
+    }
+    .seconddiv p{
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        text-align: justify;
+        color: #898989;
+        max-width: 800px;
+        width: 100%;
+    }
+    .thirddiv
+    {
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        padding : 12px 0 ;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 8px;
+            gap: 5px;
+            background: #E3E8ED;
+            border-radius: 3px;
+            span{
+                font-family: "Source Sans Pro";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 153.7%;
+                color: #111827;              
+            }          
+        }
+    }
+}
+
+
+.experience {
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    padding: 92px 0px 92px 0px;
+    .main-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 112px;
+        gap: 42px;
+        .experience-title h1 {
+            font-family: "Source Code Pro";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 60px;
+        }
+        
+        .cards {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 64px;
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                width : 50%;
+                border-radius: 5px;
+                .exp:hover {
+                    background-color: #E3E8ED;
+                }
+                .firstdiv {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 11px 16px;
+                    gap: 20px;
+                    border-radius: 5px;
+                    width : 100%;
+                    .card-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0;
+                    }
+                }
+                .seconddiv {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 11px 16px;
+                    gap: 20px;
+                    width : 100%;
+                    border-radius: 5px;
+                }
+                .thirddiv {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 11px 16px;
+                    gap: 20px;
+                    width : 100%;
+                    border-radius: 5px;
+                }
+            }
+            
+            .right {
+                display: flex;
+                width : 50%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 28px;
+                .first {
+                    font-family: "Source Sans Pro";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28.57px;
+                    color: #111827;
+                    p:last-child {
+                        font-family: "Source Sans Pro";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 153.7%;
+                        color: #6B7280;
+                    }
+                }
+                .second {
+                    font-family: "Source Sans Pro";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20.83px;
+                    color: #111827;
+                }
+                
+                .third {
+                    font-family: "Source Sans Pro";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20.83px;
+                    color: #111827;
+                }
+            }
+        }
+    }
+}
+
+
+  
+  .company {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 158.7%;
+    color: #111827;
+  }
+  
+  .designation {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(23, 33, 53, 0.4);
+  }
+
+/* Latest Work */
+.latestWork
+{
+    max-width : 1440px;
+    width : 100%;
+    margin : auto;
+    padding: 92px 0px;
+    .latestworkdiv
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+        width : 100%;
+        padding: 0px 112px;
+        .first
+        {
+            width : 100%;
+            h2{
+                font-size: 48px;
+                font-family: "Source Code Pro";
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+        .second
+        {
+            width : 100%;
+            display: flex;
+            width : 100%;
+            padding : 0px;
+            gap : 48px;
+            .card{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 26px;
+                border-radius: 10px;
+                flex-wrap: wrap;
+                gap : 26px;
+                &:hover
+                {
+                    background: #E3E8ED;
+                }
+                .card-top-text
+                {
+                    p{
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 153.7%;
+                        color: rgba(18, 15, 12, 0.4);
+                    }
+                }
+                .card-image
+                {
+                    width : 100%;
+                    img{
+                        width : 100%;
+                    }
+                }
+                .card-footer
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap : 12px;
+                    .last-text
+                    {                
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 153.7%;
+                    }
+                    .space-between
+                    {
+                        display: flex;
+                        justify-content: space-between;
+                        .technology
+                        {
+                            display: flex;
+                            list-style-type: none;
+                            gap: 12px;
+                            li{
+                                width : fit-content;
+                                padding: 3px 8px;
+                                font-family: 'Source Sans Pro';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 15px;
+                                background: #E3E8ED;
+                                border-radius: 3px;
+                            }
+                        }
+                        .card-icon
+                        {
+                            display: flex;
+                            gap: 16px;
+                        }
+                    }
+                }
+                .card-top-text
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-self: flex-start;
+                    width : 100%;
+                    gap: 103px;
+                    h3{
+                        font-family: 'Source Code Pro';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+  
+
+ 
+  .start {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 92px 0px;
+    margin: auto; 
+    .footer-text {
+        padding: 0px 42px;
+        background: #E3E8ED;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        h1 {
+  
+            text-align: center;
+            font-family: "Source Code Pro";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 61px;
+            color: #111827;
+          }
+      }
+  }
+  
+
+
+  .footer {
+    padding: 16px 0px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    .logo {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        h4 {
+            font-family: "Source Sans Pro", sans-serif;
+            color: #111827;
+          }
+    }
+    .outerdiv {
+        border-radius: 25px;
+        padding: 0px 112px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  }
+  
+  
+@media screen and ((min-width : 780px) and (max-width : 1024px))
+{
+    .latestWork
+    {
+        padding: 92px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .latestworkdiv
+        {
+            padding: 0px 48px;
+            gap: 42px;
+            .second
+            {
+                flex-direction: column;
+            }
+        }
+    }
+    .year
+    {
+        display: none;
+    }
+    .header
+    {
+        padding: 0px 48px;
+    }
+    .main
+    {
+        padding: 92px 18px;
+        .thirddiv
+        {
+            max-width : 800px;
+            width : 100%;
+            gap : 10px;
+        }
+    }
+  
+    .designation
+    {
+        display: none;
+    }
+    .experience .main-div
+    {
+        padding : 0 48px;
+    }
+   
+     
+      .footer .outerdiv {
+        border-radius: 25px;
+        padding: 0px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+  
+}
+@media screen and ((min-width : 600px ) and (max-width : 780px))
+{
+    .header
+    {
+        padding: 0px 32px;
+    }
+    .main
+    {
+        padding : 92px 18px;
+       
+    }
+    
+}
+@media screen and ((min-width : 400px ) and (max-width : 780px))
+{
+    .year
+    {
+        display: none;
+    }
+    .latestWork
+    {
+        padding: 92px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .latestworkdiv
+        {
+            padding: 0px 32px;
+            gap: 42px;
+            .second
+            {
+                flex-direction: column;
+            }
+        }
+    }
+    .main
+    {
+        padding : 92px 18px;
+        .thirddiv
+        {
+            justify-content: center;
+        }
+    }
+    .designation
+    {
+        display: none;
+    }
+    
+    .experience 
+    {
+        .main-div{
+            padding : 0 32px;
+            .left
+            {
+                width : 40%;
+            }
+            .right
+            {
+                 width : 60%;
+            }
+        }
+    }
+ 
+   
+    .start 
+    {
+        
+      
+        padding: 92px 32px;
+        .footer-text {
+                padding: 0px 42px;
+                background: #E3E8ED;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            h1{
+                font-size: 48px;  
+                line-height: 60.34px;      
+            }
+        }
+    }
+   
+     
+      .footer .outerdiv {
+        border-radius: 25px;
+        padding: 0px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+}
+@media screen and (max-width : 470px){
+    .main
+    {
+        padding: 92px 18px;
+        .thirddiv
+        {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width : 450px){
+    .experience .main-div .experience-title h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width : 470px)
+{
+    .main{
+        .firstdiv
+        {
+            h1{
+                font-size: 36px;
+            }
+        }
+    }
+    .latestWork
+    {
+       .latestworkdiv
+       {
+        .first
+        {
+            h2{
+                font-size: 30px;
+            }
+        }
+        .second
+        {
+            .card
+            {
+                .card-top-text
+                {
+                    h3{
+                        font-size: 24px;
+                    }
+                 
+                }
+            }
+        }
+       }
+    }
+}
+@media  screen and (max-width : 550px) {
+    .company{
+        display: none;
+    }
+    .left
+    {
+        flex-direction: row;
+    }
+    .experience .main-div .cards
+    {
+        flex-direction: column;
+        .left
+        {
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+        }
+        .right
+        {
+            width : 100%;
+            gap : 38px;
+        }
+    }
+    
+    
+
+}
+@media  screen and (max-width : 600px) {
+    .header
+    {
+        padding : 10px ;
+    }
+    .nav-links > li{
+        display : none;
+    }
+    .hide
+    {
+        display : none;
+    }
+    .display
+    {
+        display: block;
+    }
+}
+
+@media  screen and (max-width : 400px) {
+    .latestWork
+    {
+        padding: 92px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .latestworkdiv
+        {
+            padding: 0px 32px;
+            gap: 42px;
+            .second
+            {
+                flex-direction: column;
+                .card
+                {
+                    padding : 8px;
+                    .card-footer
+                    {
+                        .space-between
+                        {
+                            flex-direction: column;
+                            gap : 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .year
+    {
+        display: none;
+    }
+    .experience .main-div
+    {
+        padding : 0 16px;
+        .experience-title h1{
+            font-size: 28px;
+            width : 100%;
+        }
+    }
+   
+    .designation
+    {
+        display: none;
+    }
+    .company
+    {
+        display : none;
+    }
+    .start .footer-text {
+        padding: 42px 16px;
+        background: #E3E8ED;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 24px;  
+            line-height: 30.17px;  
+        }
+      }
+      .start
+      {
+        padding: 48px 16px;
+      }
+      .footer .outerdiv {
+        border-radius: 25px;
+        padding: 0px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+}
+@media screen and (max-width : 670px) {
+    .start .footer-text h1 {
+        font-size: 24px;  
+        line-height: 30.17px;  
+    }
+}
