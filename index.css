@@ -27,6 +27,8 @@ body::-webkit-scrollbar {
   padding: 0px 112px;
   margin: auto;
   z-index: 1000;
+  position: fixed;
+  background-color: var(--bg-color);
 }
 .header .nav {
   display: flex;
@@ -384,6 +386,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
 }
 .latestWork .latestworkdiv .second .card .card-footer .last-text {
   font-family: "Source Sans Pro";
@@ -451,6 +454,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 340px;
 }
 .start .footer-text h1 {
   text-align: center;
@@ -483,6 +487,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
 
 @media screen and ((min-width: 780px) and (max-width: 1024px)) {
@@ -661,7 +666,7 @@ body::-webkit-scrollbar {
     align-items: center;
   }
   .latestWork .latestworkdiv {
-    padding: 0px 32px;
+    padding: 0px 16px;
     gap: 42px;
   }
   .latestWork .latestworkdiv .second {
@@ -669,10 +674,6 @@ body::-webkit-scrollbar {
   }
   .latestWork .latestworkdiv .second .card {
     padding: 8px;
-  }
-  .latestWork .latestworkdiv .second .card .card-footer .space-between {
-    flex-direction: column;
-    gap: 10px;
   }
   .year {
     display: none;
@@ -698,6 +699,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 174px;
   }
   .start .footer-text h1 {
     font-size: 24px;
@@ -714,11 +716,5 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
-@media screen and (max-width: 670px) {
-  .start .footer-text h1 {
-    font-size: 24px;
-    line-height: 30.17px;
   }
 }/*# sourceMappingURL=index.css.map */
