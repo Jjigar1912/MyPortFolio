@@ -438,16 +438,19 @@ body::-webkit-scrollbar {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 92px 0px;
+  padding: 92px 32px;
   margin: auto;
+  width: 100%;
 }
 .start .footer-text {
   padding: 0px 42px;
   background: #E3E8ED;
   border-radius: 25px;
+  gap: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .start .footer-text h1 {
   text-align: center;
@@ -571,6 +574,7 @@ body::-webkit-scrollbar {
     padding: 92px 32px;
   }
   .start .footer-text {
+    width: 100%;
     padding: 0px 42px;
     background: #E3E8ED;
     border-radius: 25px;
@@ -579,6 +583,7 @@ body::-webkit-scrollbar {
     align-items: center;
   }
   .start .footer-text h1 {
+    max-width: 665px;
     font-size: 48px;
     line-height: 60.34px;
   }
@@ -692,10 +697,13 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   .start .footer-text h1 {
     font-size: 24px;
     line-height: 30.17px;
+    max-width: 336px;
+    width: 100%;
   }
   .start {
     padding: 48px 16px;
