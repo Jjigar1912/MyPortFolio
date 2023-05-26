@@ -485,6 +485,7 @@ body::-webkit-scrollbar
     align-items: center;
     padding: 92px 0px;
     margin: auto; 
+    width : 100%;
     .footer-text {
         padding: 0px 42px;
         background: #E3E8ED;
@@ -492,6 +493,7 @@ body::-webkit-scrollbar
         display: flex;
         justify-content: center;
         align-items: center; 
+        width : 100%;
         h1 {
   
             text-align: center;
@@ -664,6 +666,7 @@ body::-webkit-scrollbar
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width : 100%;
             h1{
                 font-size: 48px;  
                 line-height: 60.34px;      
@@ -834,6 +837,7 @@ body::-webkit-scrollbar
         display: flex;
         justify-content: center;
         align-items: center;
+    
         h1 {
             font-size: 24px;  
             line-height: 30.17px;  
