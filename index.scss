@@ -170,6 +170,7 @@ body::-webkit-scrollbar
     align-items: center;
     flex-direction: column;
     gap : 24px;
+    padding-top: 57px;
     .firstdiv h1
     {  
         font-family: "Source Code Pro", monospace;
@@ -371,7 +372,7 @@ body::-webkit-scrollbar
         padding: 0px 112px;
         .first
         {
-            width : 100%;
+            width: fit-content;
             h2{
                 font-size: 48px;
                 font-family: "Source Code Pro";
@@ -801,6 +802,10 @@ body::-webkit-scrollbar
         {
             padding: 0px 16px;
             gap: 42px;
+            .first
+            {
+                font-size: 30px;
+            }
             .second
             {
                 flex-direction: column;

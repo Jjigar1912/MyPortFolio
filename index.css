@@ -149,6 +149,7 @@ body::-webkit-scrollbar {
   align-items: center;
   flex-direction: column;
   gap: 24px;
+  padding-top: 57px;
 }
 .main .firstdiv h1 {
   font-family: "Source Code Pro", monospace;
@@ -341,7 +342,8 @@ body::-webkit-scrollbar {
   padding: 0px 112px;
 }
 .latestWork .latestworkdiv .first {
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .latestWork .latestworkdiv .first h2 {
   font-size: 48px;
@@ -668,6 +670,9 @@ body::-webkit-scrollbar {
   .latestWork .latestworkdiv {
     padding: 0px 16px;
     gap: 42px;
+  }
+  .latestWork .latestworkdiv .first {
+    font-size: 30px;
   }
   .latestWork .latestworkdiv .second {
     flex-direction: column;
