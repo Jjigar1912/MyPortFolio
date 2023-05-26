@@ -562,6 +562,9 @@ body::-webkit-scrollbar {
   .main {
     padding: 92px 18px;
   }
+  .main .seconddiv p {
+    max-width: 716px;
+  }
   .main .thirddiv {
     justify-content: center;
   }
