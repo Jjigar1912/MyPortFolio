@@ -24,13 +24,16 @@ body::-webkit-scrollbar {
 .header {
   max-width: 1440px;
   width: 100%;
-  padding: 0px 112px;
   margin: auto;
   z-index: 1000;
-  position: fixed;
+  position: sticky;
+  top: 0;
   background-color: var(--bg-color);
 }
 .header .nav {
+  max-width: 1216px !important;
+  width: 100% !important;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,7 +100,7 @@ body::-webkit-scrollbar {
   left: 0;
   z-index: 100;
   width: 100%;
-  background-color: white;
+  background-color: var(--bg-color);
   height: 100vh;
   overflow: hidden;
 }
@@ -239,7 +242,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 11px 16px;
+  padding: 30px 20px;
   gap: 20px;
   border-radius: 5px;
   width: 100%;
@@ -254,7 +257,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 11px 16px;
+  padding: 30px 20px;
   gap: 20px;
   width: 100%;
   border-radius: 5px;
@@ -263,7 +266,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 11px 16px;
+  padding: 30px 20px;
   gap: 20px;
   width: 100%;
   border-radius: 5px;
@@ -332,7 +335,7 @@ body::-webkit-scrollbar {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding: 92px 0px;
+  padding: 86px 0px;
 }
 .latestWork .latestworkdiv {
   display: flex;
@@ -365,6 +368,9 @@ body::-webkit-scrollbar {
   padding: 26px;
   border-radius: 10px;
   flex-wrap: wrap;
+  max-width: 584px !important;
+  width: 100% !important;
+  margin: auto !important;
   gap: 26px;
 }
 .latestWork .latestworkdiv .second .card:hover {
@@ -438,33 +444,46 @@ body::-webkit-scrollbar {
   line-height: 45px;
 }
 
-.start {
+.top_start {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 92px 32px;
-  margin: auto;
-  width: 100%;
+  padding: 92px 0px;
+  margin: auto 112px;
 }
-.start .footer-text {
+.top_start .start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 0px 42px;
+  gap: 42px;
   background: #E3E8ED;
   border-radius: 25px;
-  gap: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1440px;
   width: 100%;
-  height: 340px;
 }
-.start .footer-text h1 {
-  text-align: center;
+.top_start .start .footer-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 78.5px 42px;
+  padding: 0px;
+  gap: 38px;
+}
+.top_start .start .footer-text h1 {
   font-family: "Source Code Pro";
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
   line-height: 61px;
+  /* or 102% */
+  max-width: 665px !important;
+  width: 100%;
+  text-align: center;
+  /* Secondary */
   color: #111827;
 }
 
@@ -492,7 +511,39 @@ body::-webkit-scrollbar {
   height: 60px;
 }
 
+@media screen and (max-width: 1040px) {
+  .top_start .start .footer-text h1 {
+    font-size: 55px !important;
+  }
+}
+@media screen and (max-width: 865px) {
+  .top_start .start .footer-text h1 {
+    font-size: 50px !important;
+  }
+}
+@media screen and (max-width: 804px) {
+  .top_start .start .footer-text h1 {
+    font-size: 45px !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  .experience {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  .latestWork {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
 @media screen and ((min-width: 780px) and (max-width: 1024px)) {
+  .top_start {
+    margin: 92px 48px !important;
+  }
   .latestWork {
     padding: 92px 0px;
     display: flex;
@@ -505,6 +556,11 @@ body::-webkit-scrollbar {
   }
   .latestWork .latestworkdiv .second {
     flex-direction: column;
+  }
+  .latestWork .latestworkdiv .second .card {
+    max-width: 562px !important;
+    width: 100% !important;
+    margin: auto;
   }
   .year {
     display: none;
@@ -541,8 +597,26 @@ body::-webkit-scrollbar {
   .main {
     padding: 92px 18px;
   }
+  .latestWork.latestworkdiv .second .card {
+    max-width: 562px !important;
+    width: 100% !important;
+    margin: auto !important;
+  }
 }
 @media screen and ((min-width: 400px) and (max-width: 780px)) {
+  .top_start {
+    margin: auto 32px !important;
+  }
+  .top_start .start .footer-text {
+    margin: 80px 25.5px !important;
+  }
+  .top_start .start .footer-text h1 {
+    font-family: "Source Code Pro" !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 48px !important;
+    line-height: 60px !important;
+  }
   .year {
     display: none;
   }
@@ -558,6 +632,11 @@ body::-webkit-scrollbar {
   }
   .latestWork .latestworkdiv .second {
     flex-direction: column;
+  }
+  .latestWork .latestworkdiv .second .card {
+    max-width: 562px !important;
+    width: 100% !important;
+    margin: auto !important;
   }
   .main {
     padding: 92px 18px;
@@ -580,29 +659,33 @@ body::-webkit-scrollbar {
   .experience .main-div .right {
     width: 60%;
   }
-  .start {
-    padding: 92px 32px;
-  }
-  .start .footer-text {
-    width: 100%;
-    padding: 0px 42px;
-    background: #E3E8ED;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .start .footer-text h1 {
-    max-width: 665px;
-    font-size: 48px;
-    line-height: 60.34px;
-  }
   .footer .outerdiv {
     border-radius: 25px;
     padding: 0px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media screen and (max-width: 717px) {
+  .top_start .start .footer-text h1 {
+    font-size: 40px !important;
+  }
+}
+@media screen and (max-width: 632px) {
+  .top_start .start .footer-text {
+    margin: 80px 20px !important;
+  }
+  .top_start .start .footer-text h1 {
+    font-size: 40px !important;
+  }
+}
+@media screen and (max-width: 620px) {
+  .top_start .start .footer-text {
+    margin: 60px 20px !important;
+  }
+  .top_start .start .footer-text h1 {
+    font-size: 35px !important;
   }
 }
 @media screen and (max-width: 470px) {
@@ -625,6 +708,11 @@ body::-webkit-scrollbar {
   .latestWork .latestworkdiv .first h2 {
     font-size: 30px;
   }
+  .latestWork .latestworkdiv .second .card {
+    max-width: 562px !important;
+    width: 100% !important;
+    margin: auto !important;
+  }
   .latestWork .latestworkdiv .second .card .card-top-text h3 {
     font-size: 24px;
   }
@@ -643,6 +731,15 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row !important;
     align-items: center;
+  }
+  .experience .main-div .cards .left .firstdiv {
+    padding: 30px !important;
+  }
+  .experience .main-div .cards .left .seconddiv {
+    padding: 30px !important;
+  }
+  .experience .main-div .cards .left .thirddiv {
+    padding: 30px !important;
   }
   .experience .main-div .cards .right {
     width: 100%;
@@ -664,6 +761,22 @@ body::-webkit-scrollbar {
   }
 }
 @media screen and (max-width: 400px) {
+  .top_start {
+    margin: auto 16px !important;
+    padding: 48px 0px !important;
+  }
+  .top_start .start .footer-text {
+    margin: 42px 16px !important;
+  }
+  .top_start .start .footer-text h1 {
+    font-family: "Source Code Pro" !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
+    max-width: 336px !important;
+    width: 100% !important;
+  }
   .latestWork {
     padding: 92px 0px;
     display: flex;
@@ -682,6 +795,10 @@ body::-webkit-scrollbar {
   }
   .latestWork .latestworkdiv .second .card {
     padding: 8px;
+    gap: 26px !important;
+    max-width: 368px !important;
+    width: 100% !important;
+    margin: auto !important;
   }
   .year {
     display: none;
@@ -698,25 +815,6 @@ body::-webkit-scrollbar {
   }
   .company {
     display: none;
-  }
-  .start .footer-text {
-    padding: 42px 16px;
-    background: #E3E8ED;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 174px;
-  }
-  .start .footer-text h1 {
-    font-size: 24px;
-    line-height: 30.17px;
-    max-width: 336px;
-    width: 100%;
-  }
-  .start {
-    padding: 48px 16px;
   }
   .footer .outerdiv {
     border-radius: 25px;
