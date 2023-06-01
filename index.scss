@@ -28,21 +28,32 @@ body::-webkit-scrollbar
     z-index : 1000;
     position: sticky;
     top : 0 ; 
+    min-height: 60px;
     background-color: var(--bg-color);
     .nav
     {
         max-width : 1216px !important;
         width : 100%  !important;
         margin: auto;
+        min-height: 60px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0px 28px;
         .logo
         {
             display: flex;
             gap : 8px;
             align-items: center;
             padding : 17.5px 0;
+        }
+        h4{
+            color: #111827;
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 153.7%;
         }
     }
 }
@@ -53,6 +64,7 @@ body::-webkit-scrollbar
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px 0px !important;
     gap : 30px;
     li 
     {
@@ -60,7 +72,8 @@ body::-webkit-scrollbar
         text-decoration: none;
         font-family: "Inter", sans-serif;
         font-size: 12px;
-     
+        line-height: 15px;
+        font-weight: 400 ;
         a 
         {
             text-decoration: none;
@@ -163,15 +176,18 @@ body::-webkit-scrollbar
 }
 
 /* Main Section */
+.topMain
+{
+    min-height: 100vh;
+}
 .main
 {
-    min-height : 100vh ; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap : 24px;
-    padding-top: 57px;
+    padding-block : 92px ; 
     .firstdiv h1
     {  
         font-family: "Source Code Pro", monospace;
@@ -239,8 +255,8 @@ body::-webkit-scrollbar
             font-weight: 700;
             font-size: 48px;
             line-height: 60px;
-        }
-        
+            color: #111827;
+        }       
         .cards {
             display: flex;
             flex-direction: row;
@@ -491,8 +507,7 @@ body::-webkit-scrollbar
     justify-content: center;
     align-items: center;
     padding: 92px 0px;
-  
-     margin: auto 112px;
+    margin: auto 112px;
     
   .start {
  
@@ -547,22 +562,30 @@ body::-webkit-scrollbar
     width: 100%;
     max-width: 1440px;
     margin: auto;
+    min-height: 92px;
+    display: flex;
     .logo {
         display: flex;
         gap: 8px;
         align-items: center;
+        padding-block : 17.5px ; 
         h4 {
             font-family: "Source Sans Pro", sans-serif;
             color: #111827;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 153.7%;
           }
     }
     .outerdiv {
-        border-radius: 25px;
-        padding: 0px 112px;
-        display: flex;
+       display: flex;
         justify-content: space-between;
         align-items: center;
         height : 60px;
+        max-width : 1216px !important ;
+        width : 100% ;
+        margin : auto ; 
       }
   }
   
@@ -611,7 +634,7 @@ body::-webkit-scrollbar
     }
 }
 @media screen and (max-width : 1024px) {
-    .main
+    .topMain
     {
         min-height: fit-content;
     }
@@ -623,13 +646,32 @@ body::-webkit-scrollbar
     {
         min-height: fit-content;
     }
+    .header
+    {
+        .nav
+        {
+            padding: 0px 0px ;
+        }
+    }
     
 }
 @media screen and ((min-width : 780px) and (max-width : 1024px))
 {
+    .card-image
+    {
+        img{
+            width : 510px !important ; 
+        }
+    }
+    .experience .main-div .cards
+    {
+        gap : 32px !important ; 
+    }
    .top_start
    {
         margin: 92px 48px !important;
+        padding-top : 0px !important ;
+        padding-bottom: 0px !important; 
    }
     .latestWork
     {
@@ -683,11 +725,10 @@ body::-webkit-scrollbar
    
      
       .footer .outerdiv {
-        border-radius: 25px;
-        padding: 0px 48px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0px 48px;
       }
   
     
@@ -696,10 +737,7 @@ body::-webkit-scrollbar
 @media screen and ((min-width : 600px ) and (max-width : 780px))
 {
    
-    .header
-    {
-        padding: 0px 32px;
-    }
+   
     .main
     {
         padding : 92px 18px;  
@@ -804,7 +842,6 @@ body::-webkit-scrollbar
    
      
       .footer .outerdiv {
-        border-radius: 25px;
         padding: 0px 32px;
         display: flex;
         justify-content: space-between;
@@ -956,8 +993,12 @@ body::-webkit-scrollbar
 @media  screen and (max-width : 600px) {
     .header
     {
-        padding : 10px !important;
+        .nav
+        {
+            padding: 0px 28px !important;
+        }
     }
+   
     .nav-links > li{
         display : none;
     }
@@ -970,13 +1011,13 @@ body::-webkit-scrollbar
         display: block;
     }
 }
-@media screen and (min-width : 1025px) {
-    .nav
-    {
-        padding : 15px !important; 
-    }
-}
+
 @media  screen and (max-width : 400px) {
+
+   .main
+   {
+    padding-inline: 32px !important;
+   }
     .top_start
     {
         margin : auto 16px !important ; 
@@ -986,6 +1027,8 @@ body::-webkit-scrollbar
            .footer-text
             {
                 margin : 42px 16px !important;
+                max-width: 336px !important;
+                width : 100% !important ; 
                 h1{
                     font-family: 'Source Code Pro' !important;
                     font-style: normal !important;
@@ -1047,11 +1090,27 @@ body::-webkit-scrollbar
     {
         display : none;
     }   
+    .card-image
+    {
+        img{
+            max-width: 352px !important;
+            width: 100% !important;
+        }
+    }
       .footer .outerdiv {
-        border-radius: 25px;
         padding: 0px 16px;
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+}
+@media screen and (max-width : 370px) {
+  .latestWork
+  {
+    .space-between
+    {
+        flex-direction: column !important;
+        gap : 10px !important ; 
+    }
+  }
 }
