@@ -689,16 +689,7 @@ body::-webkit-scrollbar
         justify-content: space-between;
         align-items: center;
       }
-      .top_start
-      {
-        .start
-        {
-            .footer-text
-            {
-
-            }
-        }
-      }
+  
     
   
 }
@@ -976,7 +967,12 @@ body::-webkit-scrollbar
         display: block;
     }
 }
-
+@media screen and (min-width : 1025px) {
+    .nav
+    {
+        padding : 15px !important; 
+    }
+}
 @media  screen and (max-width : 400px) {
     .top_start
     {

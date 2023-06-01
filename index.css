@@ -335,7 +335,7 @@ body::-webkit-scrollbar {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding: 86px 0px;
+  padding: 92px 0px;
 }
 .latestWork .latestworkdiv {
   display: flex;
@@ -758,6 +758,11 @@ body::-webkit-scrollbar {
   }
   .display {
     display: block;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .nav {
+    padding: 15px !important;
   }
 }
 @media screen and (max-width: 400px) {
